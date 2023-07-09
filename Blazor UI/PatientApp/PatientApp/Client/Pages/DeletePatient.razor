@@ -1,0 +1,46 @@
+﻿@page "/patient/delete/{patientID:int}"
+@using PatientApp.Shared.Model
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+<h3>Delete Patient</h3>
+
+<div class="form-group">
+    @*Do you want to delete this Patient?*@
+    <h4><label for="Name" class="form-label text-danger">Do you want to delete this Patient?</label></h4>
+    <table class="table w-25 border-primary">
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td>@PatientDetail.FirstName</td>
+            </tr>
+            <tr>
+                <td>LastName</td>
+                <td>@PatientDetail.LastName</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="form-group">
+    <input type="submit" value="Delete" @onclick="(async () => await RemovePatient(PatientDetail.PatientID))" class="btn btn-danger" />
+    <input type="submit" value="Cancel" @onclick="(() => Cancel())" class="btn btn-warning" />
+</div>
+
+@code {
+    [Parameter]
+    public int patientID { get; set; }
+    protected Patient PatientDetail = new();
+    protected override async Task OnInitializedAsync()
+    {
+        PatientDetail = await Http.GetFromJsonAsync<Patient>("https://localhost:7074/api/Patient/getpatientdetailbyid/?patientID=" + Convert.ToInt32(patientID));
+    }
+
+    protected async Task RemovePatient(int userID)
+    {
+        await Http.DeleteAsync("https://localhost:7074/api/Patient/deletepatientdetails/?patientID=" + userID);
+        NavigationManager.NavigateTo("/fetchpatientdetails");
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/fetchpatientdetails");
+    }
+}

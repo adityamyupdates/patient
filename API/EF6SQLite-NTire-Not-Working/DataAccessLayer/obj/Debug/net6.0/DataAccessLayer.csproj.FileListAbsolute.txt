@@ -1,0 +1,14 @@
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+D:\DOT NET PROJECTS\Blazor With API\API\EF6SQLite\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll

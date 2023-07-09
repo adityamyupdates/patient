@@ -1,0 +1,57 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = PatientApp.Client
+build_property.RootNamespace = PatientApp.Client
+build_property.ProjectDir = D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/DOT NET PROJECTS/Blazor With API/Blazor UI/PatientApp/PatientApp/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DOT NET PROJECTS/Blazor With API/Blazor UI/PatientApp/PatientApp/Client/Pages/AddPatient.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUGF0aWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DOT NET PROJECTS/Blazor With API/Blazor UI/PatientApp/PatientApp/Client/Pages/DeletePatient.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlUGF0aWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DOT NET PROJECTS/Blazor With API/Blazor UI/PatientApp/PatientApp/Client/Pages/PatientDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DOT NET PROJECTS/Blazor With API/Blazor UI/PatientApp/PatientApp/Client/Pages/VisitDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzaXREZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DOT NET PROJECTS/Blazor With API/Blazor UI/PatientApp/PatientApp/Client/Pages/VisitorDetailList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzaXRvckRldGFpbExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DOT NET PROJECTS/Blazor With API/Blazor UI/PatientApp/PatientApp/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DOT NET PROJECTS/Blazor With API/Blazor UI/PatientApp/PatientApp/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DOT NET PROJECTS/Blazor With API/Blazor UI/PatientApp/PatientApp/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-f89z28wn5x
+
+[D:/DOT NET PROJECTS/Blazor With API/Blazor UI/PatientApp/PatientApp/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-l7eust9n1e

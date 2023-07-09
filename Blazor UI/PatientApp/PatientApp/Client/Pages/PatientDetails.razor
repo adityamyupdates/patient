@@ -1,0 +1,81 @@
+﻿@page "/fetchpatientdetails"
+@using PatientApp.Shared.Model
+@inject HttpClient Http
+
+<h3>Patient Details</h3>
+
+<div class="row">
+    <div class="col-md-6">
+        <a href='/patient/add' class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i>
+            Add Patient
+        </a>
+    </div>
+</div>
+<br />
+@if (PatientDetailsList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped align-middle table-bordered">
+        <thead class="table-success">
+            <tr>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Address</th>
+                <th>State</th>
+                <th>City</th>
+                <th>OrganizationId</th>
+                <th>Created</th>
+                <th>Updated</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var patientDetails in PatientDetailsList)
+            {
+                <tr>
+                    <td>@patientDetails.PatientID</td>
+                    <td>@patientDetails.FirstName</td>
+                    <td>@patientDetails.LastName</td>
+                    <td>@patientDetails.Address</td>
+                    <td>@patientDetails.State</td>
+                    <td>@patientDetails.City</td>
+                    <td>@patientDetails.OrganizationId</td>
+                    <td>@patientDetails.CreatedAt</td>
+                    <td>@patientDetails.UpdatedAt</td>
+                    <td>
+                        <a href='/patient/addvisit/@patientDetails.PatientID' class="btn btn-outline-dark" role="button">
+                            Visit
+                        </a>
+                        <a href='/patient/edit/@patientDetails.PatientID' class="btn btn-outline-dark" role="button">
+                            Edit
+                        </a>
+                        <a href='/patient/delete/@patientDetails.PatientID' class="btn btn-outline-danger" role="button">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
+@code {
+
+    protected List<Patient> PatientDetailsList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetPatient();
+    }
+
+    protected async Task GetPatient()
+    {
+        PatientDetailsList = await Http.GetFromJsonAsync<List<Patient>>("https://localhost:7074/api/Patient/getpatientdetails");
+    }
+
+}

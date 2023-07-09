@@ -1,0 +1,12 @@
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\bin\Debug\net6.0\PatientApp.Shared.deps.json
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\bin\Debug\net6.0\PatientApp.Shared.dll
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\bin\Debug\net6.0\PatientApp.Shared.pdb
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\obj\Debug\net6.0\PatientApp.Shared.csproj.AssemblyReference.cache
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\obj\Debug\net6.0\PatientApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\obj\Debug\net6.0\PatientApp.Shared.AssemblyInfoInputs.cache
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\obj\Debug\net6.0\PatientApp.Shared.AssemblyInfo.cs
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\obj\Debug\net6.0\PatientApp.Shared.csproj.CoreCompileInputs.cache
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\obj\Debug\net6.0\PatientApp.Shared.dll
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\obj\Debug\net6.0\refint\PatientApp.Shared.dll
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\obj\Debug\net6.0\PatientApp.Shared.pdb
+D:\DOT NET PROJECTS\Blazor With API\Blazor UI\PatientApp\PatientApp\Shared\obj\Debug\net6.0\ref\PatientApp.Shared.dll

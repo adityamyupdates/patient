@@ -1,0 +1,91 @@
+﻿@page "/patient/add"
+@page "/patient/edit/{patientID:int}"
+@using PatientApp.Shared.Model
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h3>@Title Patient</h3>
+
+<EditForm Model="@PatientDetail" OnValidSubmit="SavePatient">
+    <DataAnnotationsValidator />
+    <div class="mb-3">
+        <label for="Name" class="form-label">FirstName</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="PatientDetail.FirstName" />
+        </div>
+        <ValidationMessage For="@(() => PatientDetail.FirstName)" />
+    </div>
+    <div class="mb-3">
+        <label for="Address" class="form-label">LastName</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="PatientDetail.LastName" />
+        </div>
+        <ValidationMessage For="@(() => PatientDetail.LastName)" />
+    </div>
+    <div class="mb-3">
+        <label for="Cellnumber" class="form-label">Address</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="PatientDetail.Address" />
+        </div>
+        <ValidationMessage For="@(() => PatientDetail.Address)" />
+    </div>
+    <div class="mb-3">
+        <label for="Emailid" class="form-label">State</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="PatientDetail.State" />
+        </div>
+        <ValidationMessage For="@(() => PatientDetail.State)" />
+    </div>
+    <div class="mb-3">
+        <label for="Emailid" class="form-label">City</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="PatientDetail.City" />
+        </div>
+        <ValidationMessage For="@(() => PatientDetail.City)" />
+    </div>
+    <div class="mb-3">
+        <label for="Emailid" class="form-label">OrganizationId</label>
+        <div class="col-md-4">
+            <InputNumber class="form-control" @bind-Value="PatientDetail.OrganizationId" />
+        </div>
+        <ValidationMessage For="@(() => PatientDetail.OrganizationId)" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button class="btn btn-light" @onclick="Cancel">Cancel</button>
+    </div>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int patientID { get; set; }
+    protected Patient PatientDetail = new();
+    protected string Title = "Add";
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (patientID != 0)
+        {
+            Title = "Edit";
+            PatientDetail = await Http.GetFromJsonAsync<Patient>("https://localhost:7074/api/Patient/getpatientdetailbyid/?patientID=" + patientID);
+        }
+    }
+
+    protected async Task SavePatient()
+    {
+        if (PatientDetail.PatientID != 0)
+        {
+            await Http.PutAsJsonAsync("https://localhost:7074/api/Patient/updatepatientdetails", PatientDetail);
+        }
+        else
+        {
+            await Http.PostAsJsonAsync("https://localhost:7074/api/Patient/addpatientdetails", PatientDetail);
+        }
+        Cancel();
+    }
+    public void Cancel()
+    {
+        NavigationManager.NavigateTo("/fetchpatientdetails");
+    }
+
+}

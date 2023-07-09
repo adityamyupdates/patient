@@ -1,0 +1,76 @@
+﻿@page "/visitdetaillist"
+@using PatientApp.Shared.Model
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h3>Visitor Detail List</h3>
+
+@if (VisitList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped align-middle table-bordered">
+        <thead class="table-success">
+            <tr>
+                <th>Visit Id</th>
+                <th>Patient Id</th>
+                <th>Progress Notes</th>
+                <th>Section Name</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Temperature</th> 
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var visitDetail in VisitList)
+            {
+                <tr>
+                    <td>@visitDetail.VisitId</td>
+                    <td>@visitDetail.PatientName</td>
+                    <td>@visitDetail.ProgressNotes</td>
+                    <td>@visitDetail.SectionName</td>
+                    <td>@visitDetail.Height</td>
+                    <td>@visitDetail.Weight</td>
+                    <td>@visitDetail.Temperature</td>
+                    
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+    <div class="form-group">
+        <button class="btn btn-outline-success" @onclick="Cancel">Back To Patient Details</button>
+    </div>
+}
+
+@code {
+    protected List<Visit> VisitList = new();
+    protected Patient PatientDetail = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetAllVisit();
+    }
+
+    protected async Task GetAllVisit()
+    {
+        VisitList = await Http.GetFromJsonAsync<List<Visit>>("https://localhost:7074/api/Visit/getallvisit");
+
+        foreach (var item in VisitList)
+        {
+            var patientInfo = await Http.GetFromJsonAsync<Patient>("https://localhost:7074/api/Patient/getpatientdetailbyid/?patientID=" + Convert.ToInt32(item.PatientId)); 
+            string fullName = patientInfo.FirstName + " " + patientInfo.LastName;
+
+            item.PatientName = Convert.ToString(fullName);
+        }
+    }
+
+
+    public void Cancel()
+    {
+        NavigationManager.NavigateTo("/fetchpatientdetails");
+    }
+}
